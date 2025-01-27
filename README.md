@@ -1,110 +1,111 @@
-# Data Kendaraan Bermotor di JABAR
+# Aplikasi Berbasis Web Data Kendaraan Bermotor di Jawa Barat
 
-## Overview
-The **Vehicle Dashboard Application** is a Laravel-based web application designed to manage vehicle data. This application provides separate interfaces and functionalities for two types of users: **Admin** and **User**. The admin has full control over the data, including the ability to create, update, and delete records, while the user has read-only access to the vehicle data.
-
----
-
-## Features
-
-### 1. **Admin Dashboard**
-- **View All Data:** Admin can view all vehicle data in a tabular format.
-- **Add New Data:** A modal form to input and save new vehicle data.
-- **Edit Data:** A modal form to update existing vehicle records.
-- **Delete Data:** A delete button with confirmation to remove records from the database.
-
-### 2. **User Dashboard**
-- **View Data:** Users can view vehicle data in a read-only format.
-- **Simple and Informative UI:** A clean layout that allows users to focus on the data.
-
-### 3. **Authentication**
-- User authentication ensures that only authorized users can access the application.
-- Role-based access control determines whether a user sees the admin or user dashboard.
-
-### 4. **CRUD Functionality**
-The application implements Create, Read, Update, and Delete operations for managing vehicle data.
-
-### 5. **Logout Functionality**
-Users can securely log out of the application.
+## Gambaran Umum
+Aplikasi berbasis web untuk **data kendaraan bermotor di Jawa Barat** adalah sebuah aplikasi yang dibuat menggunakan Laravel. Aplikasi ini dirancang untuk mengelola data kendaraan dengan menyediakan antarmuka dan fungsionalitas yang berbeda untuk dua jenis pengguna: **Admin** dan **Pengguna**. Admin memiliki kontrol penuh atas data, termasuk kemampuan untuk menambah, mengubah, dan menghapus data, sedangkan pengguna hanya memiliki akses untuk melihat data kendaraan.
 
 ---
 
-## Technologies Used
+## Fitur
 
-- **Backend Framework:** Laravel
-- **Frontend Framework:** Bootstrap (for UI design and responsiveness)
+### 1. **Dashboard Admin**
+- **Lihat Semua Data:** Admin dapat melihat semua data kendaraan dalam format tabel.
+- **Tambah Data Baru:** Formulir dalam modal untuk memasukkan dan menyimpan data kendaraan baru.
+- **Edit Data:** Formulir dalam modal untuk memperbarui data kendaraan yang sudah ada.
+- **Hapus Data:** Tombol hapus dengan konfirmasi untuk menghapus data dari database.
+
+### 2. **Dashboard Pengguna**
+- **Lihat Data:** Pengguna dapat melihat data kendaraan dalam format hanya baca.
+- **UI Sederhana dan Informatif:** Tata letak yang bersih memungkinkan pengguna fokus pada data.
+
+### 3. **Autentikasi**
+- Autentikasi pengguna memastikan bahwa hanya pengguna yang berwenang dapat mengakses aplikasi.
+- Kontrol akses berbasis peran menentukan apakah pengguna melihat dashboard admin atau pengguna.
+
+### 4. **Fungsionalitas CRUD**
+Aplikasi ini mengimplementasikan operasi Create, Read, Update, dan Delete untuk mengelola data kendaraan.
+
+### 5. **Fitur Logout**
+Pengguna dapat keluar dari aplikasi dengan aman.
+
+---
+
+## Teknologi yang Digunakan
+
+- **Framework Backend:** Laravel
+- **Framework Frontend:** Bootstrap (untuk desain antarmuka dan responsivitas)
 - **Database:** MySQL
-- **Authentication:** Built-in Laravel authentication
+- **Autentikasi:** Autentikasi bawaan Laravel
 
 ---
 
-## Installation
+## Instalasi
 
-### Prerequisites
-- PHP >= 8.0
+### Prasyarat
+- PHP ≥ 8.0
 - Composer
 - MySQL
-- A web server (e.g., Apache, Nginx)
+- Server web (misalnya, Apache, Nginx)
 
-### Steps
-1. Clone the repository:
+### Langkah-langkah
+1. Clone repository:
    ```bash
    git clone <repository-url>
    ```
-2. Navigate to the project directory:
+2. Pindah ke direktori proyek:
    ```bash
    cd <project-directory>
    ```
-3. Install dependencies:
+3. Install dependensi:
    ```bash
    composer install
    ```
-4. Set up the `.env` file:
+4. Atur file `.env`:
    ```bash
    cp .env.example .env
    ```
-   Configure the database and other environment variables in the `.env` file.
+   Konfigurasikan database dan variabel lingkungan lainnya di file `.env`.
 
-5. Run migrations to create the database schema:
+5. Jalankan migrasi untuk membuat skema database:
    ```bash
    php artisan migrate
    ```
-6. Seed the database (optional, if seeds are available):
+6. Isi database (opsional, jika tersedia seed):
    ```bash
    php artisan db:seed
    ```
-7. Start the development server:
+7. Jalankan server pengembangan:
    ```bash
    php artisan serve
    ```
 
 ---
 
-## Usage
+## Penggunaan
 
 ### Admin
-1. Log in using an admin account.
-2. Navigate to the admin dashboard to manage vehicle data:
-   - Add new vehicles.
-   - Edit existing records.
-   - Delete unnecessary data.
+1. Login menggunakan akun admin.
+2. Navigasikan ke dashboard admin untuk mengelola data kendaraan:
+   - Tambah data kendaraan baru.
+   - Edit data yang ada.
+   - Hapus data yang tidak diperlukan.
 
-### User
-1. Log in using a user account.
-2. View vehicle data in a read-only format.
+### Pengguna
+1. Login menggunakan akun pengguna.
+2. Lihat data kendaraan dalam format hanya baca.
 
 ---
 
-## Folder Structure
+## Struktur Folder
 
-- **Controllers:** `DashboardController`, `VehicleController` manage business logic.
+- **Controllers:** `DashboardController`, `VehicleController` mengelola logika bisnis.
 - **Views:**
-  - `dashboard/admin.blade.php`: Admin dashboard.
-  - `dashboard/user.blade.php`: User dashboard.
-- **Models:** `Vehicle` model interacts with the database.
-- **Routes:** Defined in `routes/web.php` for resource routing and authentication.
+  - `dashboard/admin.blade.php`: Dashboard admin.
+  - `dashboard/user.blade.php`: Dashboard pengguna.
+- **Models:** Model `Vehicle` berinteraksi dengan database.
+- **Routes:** Didefinisikan di `routes/web.php` untuk routing resource dan autentikasi.
 
 ---
 
-## Author
-This application was created as part of a coursework project. Contributions and feedback are welcome!
+## Penulis
+Aplikasi ini dibuat sebagai bagian dari proyek pengembangan sistem berbasis web. Kritik dan saran sangat diterima!
+
